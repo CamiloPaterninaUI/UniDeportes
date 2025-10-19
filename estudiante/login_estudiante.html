@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio de Sesión - UniDeportes</title>
+  <link rel="stylesheet" href="../estilos/estilos_estudiante.css" />
+
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav.menu-principal {
+      background: #004aad;
+      color: #fff;
+      padding: 10px 0;
+    }
+
+    nav .logo {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    nav.menu-principal ul {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav.menu-principal a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    nav.menu-principal a:hover {
+      color: #d6e4ff;
+      transform: scale(1.05);
+    }
+
+    main.contenido {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #004aad;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .formulario {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 35px 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      animation: fadeInUp 0.9s ease-out forwards;
+      border: 1px solid #e5e5e5;
+    }
+
+    .campo {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .campo label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .campo input {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      background-color: #f9f9f9;
+      transition: all 0.3s ease;
+    }
+
+    .campo input:focus {
+      border-color: #004aad;
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0, 74, 173, 0.2);
+      outline: none;
+    }
+
+    .btn-registrar {
+      background: #004aad;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-registrar:hover {
+      background: #007bff;
+      transform: scale(1.03);
+      box-shadow: 0 4px 15px rgba(0, 74, 173, 0.25);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+      color: #555;
+      background: #f5f5f5;
+      border-top: 1px solid #e5e5e5;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="menu-principal">
+    <div class="logo">UniDeportes</div>
+    <ul class="menu-lista">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="registro_estudiante.html">Registrarse</a></li>
+      <li><a href="login_estudiante.html" class="activo">Iniciar Sesión</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenido">
+    <h1>Inicio de Sesión de Estudiantes</h1>
+
+
+<section class="formulario">
+  <form id="form-login" autocomplete="off">
+    <div class="campo">
+      <label for="correo">Correo institucional o Gmail:</label>
+      <input type="email" id="correo" name="correo" placeholder="ejemplo@estudiantesunibague.edu.co" required />
+    </div>
+
+    <div class="campo">
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" minlength="6" required />
+    </div>
+
+    <button type="submit" class="btn-registrar">Iniciar Sesión</button>
+  </form>
+</section>
+
+
+  </main>
+
+  <footer>
+    <p><strong>UNIDEPORTES</strong> - Universidad de Ibagué</p>
+  </footer>
+
+  <script src="../scripts/login_estudiante.js"></script>
+
+</body>
+</html>

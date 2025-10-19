@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel del Estudiante - UniDeportes</title>
+  <link rel="stylesheet" href="../estilos/panel_estudiante.css" />
+
+  <style>
+    /* ===== ANIMACIONES ===== */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* ===== EFECTOS DE ENTRADA ===== */
+    h1 {
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+
+    .perfil-info {
+      opacity: 0;
+      animation: fadeInUp 0.9s ease-out forwards;
+      animation-delay: 0.4s;
+    }
+
+    .torneos {
+      opacity: 0;
+      animation: fadeInUp 0.9s ease-out forwards;
+      animation-delay: 0.6s;
+    }
+
+    /* ===== INTERACCIÓN VISUAL ===== */
+    .btn-inscribir {
+      transition: all 0.3s ease;
+      transform: scale(1);
+    }
+
+    .btn-inscribir:hover {
+      background-color: #004aad;
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 74, 173, 0.3);
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    table th, table td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    table tr:hover {
+      background-color: rgba(0, 74, 173, 0.05);
+      transition: 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Menú superior -->
+  <nav class="menu-principal">
+    <div class="logo">UniDeportes</div>
+    <ul class="menu-lista">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="panel_estudiante.html" class="activo">Mi Panel</a></li>
+      <li><a href="login_estudiante.html" id="cerrar-sesion">Cerrar Sesión</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="contenido">
+    <section class="perfil">
+      <h1>Bienvenido, <span id="nombre-estudiante"></span> 👋</h1>
+
+      <div class="perfil-info">
+        <div class="info">
+          <p><strong>Correo:</strong> <span id="correo"></span></p>
+          <p><strong>Código:</strong> <span id="codigo"></span></p>
+          <p><strong>Edad:</strong> <span id="edad"></span></p>
+          <p><strong>Tipo de sangre:</strong> <span id="tipo_sangre"></span></p>
+          <p><strong>Teléfono:</strong> <span id="telefono"></span></p>
+          <p><strong>Contacto de emergencia:</strong> <span id="emergencia"></span></p>
+          <p><strong>Activo en la Universidad:</strong> <span id="activo"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Torneos disponibles -->
+    <section class="torneos">
+      <h2>Torneos Disponibles</h2>
+      <table class="tabla-torneos">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Deporte</th>
+            <th>Inicio</th>
+            <th>Inscribirse</th>
+          </tr>
+        </thead>
+        <tbody id="lista-torneos">
+          <tr>
+            <td>Torneo Interfacultades</td>
+            <td>Fútbol Sala</td>
+            <td>30 de Octubre 2027</td>
+            <td><a href="inscripcion.html" class="btn-inscribir">Inscribirme</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>UNIDEPORTES</strong> - Universidad de Ibagué</p>
+  </footer>
+
+  <!-- Script principal del panel -->
+  <script src="../scripts/panel_estudiante.js"></script>
+</body>
+</html>
