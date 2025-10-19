@@ -116,7 +116,9 @@ http://localhost/unideportes/paginas/registro_estudiante.html
 
 ## 👨‍💻 Autor
 
-**Camilo Andrés Paternina Puentes**
+**Camilo Paternina**
+**Stiven Camacho**
+**Alejandro Silva**
 Desarrollador de Software — Universidad de Ibagué
 📧 Contacto: [camilo.paternina@estudiantesunibague.edu.co](mailto:camilo.paternina@estudiantesunibague.edu.co)
 📍 Ibagué, Colombia
